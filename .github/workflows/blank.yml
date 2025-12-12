@@ -1,0 +1,19 @@
+name: CI
+
+jobs:
+  Testing:
+    runs-on:ubutu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: conda creation
+        uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: envs/development.yml
+          init-shell: bash
+          cache-environment: true
+          cache-downloads: true
+      - name: Environment info
+        run: |
+          micromamba info
+          micromamba list
+        shell: bash -el {0}
