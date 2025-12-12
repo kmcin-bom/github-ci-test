@@ -1,0 +1,11 @@
+name: ingest_ci 
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.12
+  - numpy
+  - iris
+  - pip
