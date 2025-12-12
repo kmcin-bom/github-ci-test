@@ -2,7 +2,7 @@ name: CI
 
 jobs:
   Testing:
-    runs-on: ubutu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
       - name: conda creation
